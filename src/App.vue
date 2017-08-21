@@ -36,7 +36,7 @@ export default {
         this.loading = false
       })
       .catch(e => {
-        alert('Error')
+        console.log(e)
         this.loading = false
       })
     },
@@ -54,7 +54,7 @@ export default {
         if (this.$route.path !== '/') this.$router.replace('/')
       })
       .catch(e => {
-        alert('Error')
+        console.log(e)
         this.loading = false
       })
     },
@@ -76,7 +76,7 @@ export default {
         this.$router.push('/')
       })
       .catch(e => {
-        alert('Error')
+        console.log(e)
         this.loading = false
       })
     }
@@ -93,7 +93,7 @@ export default {
       this.loading = false
     })
     .catch(e => {
-      alert('Error')
+      console.log(e)
       this.loading = false
     })
   }
