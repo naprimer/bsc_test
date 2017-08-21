@@ -31,7 +31,7 @@ export default {
           'Content-Type': 'application/json'
         }
       })
-      .then(function (res) {
+      .then(res => {
         this.notes.push(res.body)
         this.loading = false
       })
@@ -43,7 +43,7 @@ export default {
     deleteNote (id) {
       this.loading = true
       this.$http.delete(this.$global.apiURL + 'notes/' + id)
-      .then(function () {
+      .then(() => {
         for (let i = 0; i < this.notes.length; i++) {
           if (+this.notes[i].id === +id) {
             this.notes.splice(i, 1)
@@ -65,7 +65,7 @@ export default {
           'Content-Type': 'application/json'
         }
       })
-      .then(function () {
+      .then(() => {
         for (let i = 0; i < this.notes.length; i++) {
           if (+this.notes[i].id === +id) {
             this.notes[i].title = title
